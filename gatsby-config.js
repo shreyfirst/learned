@@ -9,7 +9,7 @@ module.exports = {
       resolve: `gatsby-source-rest-api`,
       options: {
         endpoints: [
-          'https://v2-api.sheety.co/yeety/learned/sheet'
+          'https://v2-api.sheety.co/516dddcf7d74d7012cc18be721885dbd/api/sheet1'
         ]
       }
     }
