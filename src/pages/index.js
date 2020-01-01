@@ -14,7 +14,7 @@ const IndexPage = ({data}) => {
             >
                 something I learned on...
             </h1>
-            {data.allRestApiYeetyLearnedSheet.nodes[0].sheet.map((sheet) => {
+            {data.allRestApiYeetyLearnedSheet.nodes[0].sheet1.map((sheet) => {
                 return (
                     //<p dangerouslySetInnerHTML={{__html: txt}}></p>
                     <article
@@ -25,14 +25,14 @@ const IndexPage = ({data}) => {
                         }}
                     >
                         <h2
-                            dangerouslySetInnerHTML={{__html: (sheet.lesson ? sheet.date : null)}}
+                            dangerouslySetInnerHTML={{__html: (sheet1.lesson ? sheet1.date : null)}}
                             sx={{
                                 color: '#336',
                                 margin: '0 1rem 1rem 0',
                             }}
                         ></h2>
                         <p
-                            dangerouslySetInnerHTML={{__html: sheet.lesson ? sheet.lesson : null}}
+                            dangerouslySetInnerHTML={{__html: sheet1.lesson ? sheet1.lesson : null}}
                             sx={{
                                 color: '#14132c',
                                 lineHeight: '150%',
@@ -70,7 +70,7 @@ export const query = graphql`
 query MyQuery {
     allRestApiYeetyLearnedSheet {
       nodes {
-        sheet {
+        sheet1 {
           date
           lesson
         }
